@@ -17,7 +17,7 @@ matrix:
     - rust: nightly
       before_script:
         - export PATH=$HOME/.cargo/bin:$PATH
-        - which rustfmt || cargo install rustfmt-nightly
+        - which cargo-fmt || cargo install rustfmt-nightly
       script:
         - eval cargo fmt -- --write-mode=diff
         - eval cargo doc --verbose
