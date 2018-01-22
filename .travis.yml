@@ -14,10 +14,10 @@ matrix:
       before_script:
         - export PATH=$HOME/.cargo/bin:$PATH
         - which cargo-coveralls || cargo install cargo-travis
-    - rust: stable
+    - rust: nightly
       before_script:
         - export PATH=$HOME/.cargo/bin:$PATH
-        - which rustfmt || cargo install rustfmt
+        - which rustfmt || cargo install rustfmt-nightly
       script:
         - eval cargo fmt -- --write-mode=diff
         - eval cargo doc --verbose
