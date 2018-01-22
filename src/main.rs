@@ -22,18 +22,18 @@ fn main() {
     println!("{:?}", opt);
 
     match probe() {
-      None    => println!("platform or language not recognized"),
-      Some(p) => {
-        let res = match opt {
-          Opt::Build => p.build(),
-          Opt::Run => p.run(),
-        };
+        None => println!("platform or language not recognized"),
+        Some(p) => {
+            let res = match opt {
+                Opt::Build => p.build(),
+                Opt::Run => p.run(),
+            };
 
-        if res {
-          println!("success!");
-        } else {
-          println!("failed");
+            if res {
+                println!("success!");
+            } else {
+                println!("failed");
+            }
         }
-      }
     }
 }
