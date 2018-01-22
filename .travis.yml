@@ -21,6 +21,9 @@ matrix:
       script:
         - eval cargo fmt -- --write-mode=diff
         - eval cargo doc --verbose
+  allow_failures:
+    - rust: nightly
+
 
 notifications:
   webhooks:
