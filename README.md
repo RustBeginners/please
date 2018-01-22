@@ -5,7 +5,8 @@ Write `please build` to build the project, `please run` to run it! Works with ev
 
 \*as long as the language you test is in the following list:
 
-- lol, nothing there right now
+- Rust
+- lol, nothing more right now
 - ...
 
 ## Contributing
